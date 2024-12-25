@@ -22,6 +22,32 @@ This repository contains personal configuration(s) for setting up a system with 
 
 Nix allows for an easy to manage, collaborative, reproducible deployment. This means that once something is setup and configured, it works forever. If someone else shares their configuration, anyone can make use of it.
 
+## Components
+
+|                             | **NixOS (Wayland)**                                                                        |
+| --------------------------- | ------------------------------------------------------------------------------------------ |
+| **Window Manager**          | [Hyprland](https://github.com/hyprwm/Hyprland)                                             |
+| **Terminal Emulator**       | [Kitty](https://github.com/kovidgoyal/kitty)                                               |
+| **Bar**                     | [Waybar](https://github.com/Alexays/Waybar)                                                |
+| **Application Launcher**    | [Rofi](https://github.com/davatorium/rofi)                                                 |
+| **Notification Daemon**     | [Dunst](https://github.com/dunst-project/dunst)                                            |
+| **Wallpapers**              | [Hyprpaper](https://github.com/hyprwm/hyprpaper)                                           |
+| **Display Manager**         | [GDM](https://wiki.archlinux.org/title/GDM)                                                |
+| **Network Management**      | [NetworkManager](https://wiki.gnome.org/Projects/NetworkManager)                           |
+| **System Resource Monitor** | [htop](https://github.com/htop-dev/htop)                                                   |
+| **File Manager**            | [Nemo](https://github.com/linuxmint/nemo)                                                  |
+| **Shell**                   | [Starship](https://github.com/starship/starship)                                           |
+| **Media Player**            | [Jellyfin](https://github.com/jellyfin/jellyfin), [mpv](https://github.com/mpv-player/mpv) |
+| **Text Editor**             | [Visual Studio Code](https://github.com/microsoft/vscode)                                  |
+| **Fonts**                   | [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)                                      |
+
+## Wallpaper
+
+<p align="center">
+	<img src="https://i.imgur.com/rTvN4Hy.jpeg" />
+    Artwork by <strong>Anastasia Ermakova</strong> | <a href="https://www.artstation.com/shinasty">ArtStation</a>
+</p>
+
 ## Hosts
 
 See [hosts](../hosts) for details.
@@ -37,11 +63,19 @@ See [iso](../iso) for details.
 For NixOS, use the following command(s):
 
 ```bash
-sudo nixos-rebuild switch --flake .#<host>
+git clone https://github.com/xskayne/nixdots
+cd nixdots
+nixos-rebuild switch --flake .#<host>
 ```
 
-For generating a custom image, use the following command(s):
+For generating a custom image, use the following command:
 
 ```bash
-cd iso && nix build .#nixosConfigurations.iso.config.system.build.isoImage -no-write-lock-file
+cd iso
+nix build .#nixosConfigurations.iso.config.system.build.isoImage -no-write-lock-file
 ```
+
+## References
+
+- [The Ultimate NixOS HomeLab Guide](https://jasperclarke.com/blog/nixos-homelab-the-install#setup-and-partitioning)
+- [NixOS & Flakes Book](https://nixos-and-flakes.thiscute.world)
