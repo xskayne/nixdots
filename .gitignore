@@ -1,1 +1,4 @@
 iso/result
+
+host/godrick/hardware-configuration.nix
+host/ranni/hardware-configuration.nix
