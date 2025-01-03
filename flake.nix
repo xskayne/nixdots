@@ -24,14 +24,6 @@
             ./hosts/godrick/hardware-configuration.nix
           ];
         };
-
-        snugglehub = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          modules = [
-            ./hosts/snugglehub/configuration.nix
-            ./hosts/snugglehub/hardware-configuration.nix
-          ];
-        };
       };
     };
 }
