@@ -165,8 +165,15 @@
     # Whether to enable printing support through the CUPS daemon
     printing.enable = true;
 
-    # Whether to enable libinput
-    libinput.enable = true;
+    libinput = {
+      # Whether to enable libinput
+      enable = true;
+
+      touchpad = {
+        # Enables or disables natural scrolling behavior
+        naturalScrolling = true;
+      };
+    };
 
     xserver = {
       # Whether to enable the X server
