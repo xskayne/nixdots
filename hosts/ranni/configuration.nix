@@ -19,16 +19,8 @@
       # Whether the installation process is allowed to modify EFI boot variables
       efi.canTouchEfiVariables = true;
 
-      grub = {
-        # Whether to enable the GNU GRUB boot loader
-        enable = true;
-
-        # Whether GRUB should be built with EFI support
-        efiSupport = true;
-
-        # The device on which the GRUB boot loader will be installed
-        device = "nodev";
-      };
+      # Whether to enable the systemd-boot (formerly gummiboot) EFI boot manager
+      systemd-boot.enable = true;
     };
   };
 
